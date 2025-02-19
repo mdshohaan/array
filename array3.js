@@ -8,3 +8,13 @@
 // console.log(res);
 
 //* 22 
+// const departments = [
+//   { id: 1, name: "HR" },
+//   { id: 2, name: "Engineering" },
+//   { id: 3, name: "Marketing" },
+//   { id: 4, name: "Sales" },
+// ];
+// const res = departments.some(dept => dept.name === "Sales")
+// const res = departments.find(dept => dept.name === "Sales")
+// const res = departments.filter(dept => dept.name === "Sales")
+// console.log(res);
