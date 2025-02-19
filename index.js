@@ -637,7 +637,7 @@ let customers = [
                    .map(married => married.expense)
                    .reduce((accum,expense) => accum + expense);
   console.log('Orchestrated total expense in INR: ', total);
-}
+} 
 
 
 

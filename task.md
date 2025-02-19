@@ -53,8 +53,8 @@ This file contains the tasks that you need to perform to practise the concepts l
   ];
   ```
 
-- [ ] **T-021**: Can you filter employees who work in the "Engineering" department?
-- [ ] **T-022**: Create a new array that combines employee names and department names in the format: "Alice (HR)".
+- [ ] **T-021**: nujm
+'''''''''''''''kill,  d- [ ] **T-022**: Create a new array that combines employee names and department names in the format: "Alice (HR)".
 - [ ] **T-023**: Find the highest salary among employees.
 - [ ] **T-024**: Check if there is at least one employee in the "Sales" department.
 - [ ] **T-025**: Write a function to filter employees earning more than 6000.
