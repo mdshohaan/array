@@ -30,6 +30,17 @@ const pointTable = [
 ];
 //  One Dimensional Traverse
 for (let i = 0; i < pointTable.length; i++) {
-  console.log(`${i}:  x=${pointTable[i][0]},  y=${pointTable[i][1]}`);
+  // console.log(`${i}:  x=${pointTable[i][0]},  y=${pointTable[i][1]}`);
 }
+
 //  Two Dimensional Traverse
+const numbers = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+for (let i = 0; i < numbers.length; i++) {
+  for (let j = 0; j < numbers[i].length; j++) {
+    // console.log(numbers[i][j]);
+  }
+}
