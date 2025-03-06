@@ -11,5 +11,21 @@ const filePath = path.resolve(__dirname, finleName);
   const data = readFile(filePath) || [];
   const todo = new Todo(data);
   const { _: baseCommand } = argv;
-  console.log(argv);
+
+  switch (baseCommand[0]) {
+    case ADD: {
+      todo.addItem(argv.text);
+      console.log("Todo Added");
+      saveFile(todo.todoList, filePath);
+      break;
+    }
+    case UPDATE: {
+      todo.update(argev.id, argv.text);
+      console.log("Todo Updated");
+      saveFile(todo.todoList, filePath);
+      break;
+    }
+    default:
+      throw new Error("Command Not Found");
+  }
 })();
