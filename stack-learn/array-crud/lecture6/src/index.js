@@ -25,6 +25,23 @@ const filePath = path.resolve(__dirname, finleName);
       saveFile(todo.todoList, filePath);
       break;
     }
+    case NEXT: {
+      const item = todo.next();
+      console.log(`${item.id}:${item.text} [${item.created}]`);
+      break;
+    }
+    case DONE: {
+      todo.done();
+      console.log("One Item Completed");
+      saveFile(todo.todoList, filePath);
+    }
+    case FIND: {
+      const items = todo.find(argv.term);
+      if (items.length === 0) {
+        console.log("No Item Found");
+        break;
+      }
+    }
     default:
       throw new Error("Command Not Found");
   }
