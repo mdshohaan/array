@@ -10,4 +10,9 @@ arr1.push(11, 12);
 //  Old method use prototype
 Array.prototype.push.apply(arr1, arr2);
 
+// use Unshift add at the beginning
+arr1.unshift(...arr2);
+// use splice to insert the given index
+arr1.splice(1, 0, 100);
+
 console.log(arr1);
