@@ -15,13 +15,22 @@ class Stack {
     this.list[++this.top] = item;
     return true;
   }
-  pop() {}
+  pop() {
+    if (this.isEmpty()) {
+      console.log("Stack Underflow");
+      return false;
+    }
+    let item = this.list[this.top];
+    delete this.list[this.top];
+    this.top--;
+    return item;
+  }
   peek() {
     if (this.isEmpty()) {
       console.log("Stack Underflow");
       return false;
     }
-    return this.list(this.top);
+    return this.list[this.top];
   }
   isEmpty() {
     return this.top < 0;
