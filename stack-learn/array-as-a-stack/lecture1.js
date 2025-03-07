@@ -36,3 +36,4 @@ class Stack {
     return this.top < 0;
   }
 }
+module.exports = Stack;
