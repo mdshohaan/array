@@ -1,4 +1,4 @@
-/**  @Title  Implement A Basic Queue
+/** @Title  Implement A Basic Queue
  *
  */
 const MAX_SIZE = 30;
@@ -47,4 +47,4 @@ class Queue {
     return this.front === this.rear;
   }
 }
-exports.default = Queue;
+module.exports = Queue;
