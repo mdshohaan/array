@@ -49,3 +49,8 @@ const lowGPA = students.filter((value) => value.gpa < 3.6);
 ✅ map() ব্যবহার করলে নতুন Title অ্যাড করা যাবে।
 ✅ filter() শুধুমাত্র true/false রিটার্ন পেলে কাজ করে।
  */
+function isBigEnough(value) {
+  return value >= 10;
+}
+const big = [10, 5, 2, 20, 30, 40].filter(isBigEnough);
+console.log(big);
