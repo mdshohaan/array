@@ -43,3 +43,9 @@ const students = [
 ];
 const lowGPA = students.filter((value) => value.gpa < 3.6);
 // console.log(lowGPA);
+// send them inspiring message to study hard and try more
+/**
+ * ❌ filter() অবজেক্ট পরিবর্তন বা নতুন প্রপার্টি যোগ করতে পারে না।
+✅ map() ব্যবহার করলে নতুন Title অ্যাড করা যাবে।
+✅ filter() শুধুমাত্র true/false রিটার্ন পেলে কাজ করে।
+ */
