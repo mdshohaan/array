@@ -50,7 +50,11 @@ const mappedStudents = students.map((value) => {
   };
 });
 // console.log(mappedStudents);
-const mappedStudents1 = students.map((value) => {
-  return value.gpa >= 3.5 ? "Passed" : "Failed";
-});
-console.log(mappedStudents1);
+const numbers = [4, 9, 16, 25];
+const newArr = numbers.map(Math.sqrt); // numbers.map((num) => Math.sqrt(num)); same output
+
+function r(num) {
+  return num * 10;
+}
+const mult = numbers.map(r); //map(r) দেওয়া মানেই map() প্রতিটি উপাদানের জন্য r(num) কল করবে।
+console.log(mult);
