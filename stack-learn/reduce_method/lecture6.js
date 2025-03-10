@@ -4,6 +4,7 @@
 function myReduce(arr, cb, init) {
   let acc = init,
     start = 0;
+
   if (!init) {
     acc = arr[0];
     start = 1;
