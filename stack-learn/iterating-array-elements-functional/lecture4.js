@@ -1,5 +1,5 @@
 //  Map VS Filter
-//  Map modify and change the whole array but filter testing condition
+//  Map can modify and change the whole array but filter can testing condition on array
 const students = [
   {
     id: 1,
