@@ -19,4 +19,4 @@ const avg = numbers.reduce((acc, curr, idx, arr) => {
   }
   return acc;
 });
-console.log(avg);
+// console.log(avg);
