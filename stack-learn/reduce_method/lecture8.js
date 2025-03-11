@@ -1,4 +1,4 @@
-//  Matrix Sum
+// @Title: Matrix Sum
 const matrix = [
   [1, 2, 3],
   [4, 5, 6],
@@ -30,3 +30,9 @@ console.log(sumV);
 // •	map is used to sum corresponding elements from two arrays.
 // •	Inside reduce, acc keeps updating as we go through each row.
 // •	map ensures that elements in each column are added together.
+
+// Flat Map
+const sumFlat = matrix.reduce((acc, curr) => {
+  return acc + curr.reduce((a, b) => a + b);
+}, 0);
+console.log(sumFlat);
