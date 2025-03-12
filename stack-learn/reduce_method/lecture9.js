@@ -21,3 +21,13 @@ const odd = numbers.reduce((acc, curr) => {
   return acc;
 }, []);
 console.log(odd);
+
+// Big array
+const bigArray = [];
+for (let i = 0; i < 5000000; i++) {
+  bigArray.push(i);
+}
+// Map and Filter Chain Time Efficiency
+console.time("both");
+bigArray.filter((v) => v % 2 === 0).map((v) => v * 2);
+console.timeEnd("both");
