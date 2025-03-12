@@ -9,6 +9,7 @@ const n = 5;
 const x = div2(times3(add10(n)));
 console.log(x);
 
+//  Writing a Compose Function for Multiple Functions
 // Pipe Function - shortest way
 const pipe =
   (...fns) =>
@@ -18,3 +19,10 @@ const r1 = pipe(add10, times3, div2)(x);
 console.log(r1);
 
 // Compose Function long way
+const compose = (...fns) => {
+  return (x) => {
+    return fns.reduce((v, f) => f(v), n);
+  };
+};
+const r2 = compose(add10, times3, div2)(x);
+console.log(r2);
