@@ -27,7 +27,18 @@ const bigArray = [];
 for (let i = 0; i < 5000000; i++) {
   bigArray.push(i);
 }
-// Map and Filter Chain Time Efficiency
+
+// Map and Filter chain  - Time Efficiency
 console.time("both");
 bigArray.filter((v) => v % 2 === 0).map((v) => v * 2);
 console.timeEnd("both");
+
+// Map and Filter Reduce - Time Efficiency (less time to load )
+console.time("Reduce");
+bigArray.reduce((acc, curr) => {
+  if (curr % 2 === 0) {
+    acc.push(curr * 2);
+  }
+  return acc;
+}, []);
+console.timeEnd("Reduce");
