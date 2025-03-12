@@ -48,17 +48,19 @@ const java = {
     },
   },
 };
-const inspectArticle = (course) => {
-  const path = "contents.article.count";
+const inspectObj = (obj, path, returnValue = 0) => {
   return path.split(".").reduce((acc, field) => {
     if (acc) {
       return acc[field];
     }
-    return 0;
-  }, course);
+    return returnValue;
+  }, obj);
 };
 
 const courses = [js, react, java];
 courses.forEach((course) => {
-  console.log(`${course.name} has Article ${inspectArticle(course)}`);
+  const countVideo = inspectObj(course, "contents.video.count");
+  const countArtcile = inspectObj(course, "contents.article.count");
+  const countQuiz = inspectObj(course, "contents.quiz.count");
+  console.log(countVideo, countArtcile, countQuiz);
 });
