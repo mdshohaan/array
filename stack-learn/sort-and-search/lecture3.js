@@ -1,4 +1,4 @@
-// Understand and Implement Linear Searching
+// Understand and Implement Linear Search
 const arr = [1, 3, 45, 67, 534, 78, 97, 54];
 const data = [
   { id: 1, name: "Alice" },
