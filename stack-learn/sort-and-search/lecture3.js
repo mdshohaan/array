@@ -1,4 +1,4 @@
-// Implement Searching
+// Understand and Implement Linear Searching
 const arr = [1, 3, 45, 67, 534, 78, 97, 54];
 const data = [
   { id: 1, name: "Alice" },
@@ -18,3 +18,18 @@ const linearSearch = (arr, key) => {
 };
 const s1 = linearSearch(arr, 67);
 console.log(s1);
+
+const linearSearchCB = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (cb(arr[i])) {
+      return i;
+    }
+  }
+  return -1;
+};
+// here loop start and cb(arr[i]) pass to callback and check with item then return i
+
+const s3 = linearSearchCB(data, (item) => item.name === "Alice");
+console.log(s3);
+const s4 = linearSearchCB(data, (item) => item.id === 2);
+console.log(s4);
