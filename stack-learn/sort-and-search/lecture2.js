@@ -11,11 +11,12 @@ numbers.sort((a, b) => a - b); // here a=20,b=10
 // If we want to sorth strings then what should we do
 let strings = ["apple", "Cat", "Ball", "Apple"];
 
-strings.sort((a, b) => {
-  a = a.toLowerCase();
-  b = b.toLowerCase();
-  if (a > b) return 1;
-  if (b > a) return -1;
-  return 0;
-});
+// strings.sort((a, b) => {
+//   a = a.toLowerCase();
+//   b = b.toLowerCase();
+//   if (a > b) return 1;
+//   if (b > a) return -1;
+//   return 0;
+// });
+strings.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
 console.log(strings); // [ 'apple', 'Apple', 'Ball', 'Cat' ]
