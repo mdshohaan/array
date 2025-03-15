@@ -1,7 +1,5 @@
 // Static Method vs Instance Method
 
-const { array } = require("prop-types");
-
 const arr = [];
 // arr.concat(); // instance method
 // Array.from(); // static method
@@ -26,3 +24,28 @@ function f() {
   return Array.from(arguments);
 }
 console.log(f(1, 2, 3, 4, 5)); // [ 1, 2, 3, 4, 5 ]
+
+// Using an Arrow function as the map function to
+// manipulate the elements
+const s5 = Array.from([1, 2, 3], (x) => x + x);
+// console.log(s5);
+
+// charAt(index);
+// Returns the character at the specified index.
+// string
+// "Hello".charAt(1) // "e"
+
+// charCodeAt(index);
+// Returns the Unicode value (ASCII) of the character at the specified index.
+// number
+// "Hello".charCodeAt(1) // 101
+
+// (Array.isArray) only return true or false
+
+// Array.of
+Array.of(7); // [7]
+Array.of(1, 2, 3); // [1,2,3]
+
+// Array
+Array(7); // [ <7 empty items> ]
+Array(1, 2, 3); // [1,2,3]
