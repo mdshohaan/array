@@ -28,4 +28,4 @@ const ourFind = (arr, cb) => {
   return undefined;
 };
 const index2 = ourFind(tasks, (item) => item.isDone === false);
-console.log(index2); // { name: "Buy groceries", isDone: false }
+console.log(index2); //{ name: "Buy groceries", isDone: false }
