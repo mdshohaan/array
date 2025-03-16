@@ -11,14 +11,25 @@ arr2.push(5);
 const arr3 = [...arr, 6];
 // console.log(arr, arr3);
 
-// 🔹 Shallow Copy
-// একটি shallow copy কোনো অবজেক্ট বা ডাটাসেটের শুধুমাত্র references কপি করে, কিন্তু nested objects (অভ্যন্তরীণ অবজেক্ট) গুলোর আসল রেফারেন্স ধরে রাখে। অর্থাৎ, যদি মূল অবজেক্টের কোনো অভ্যন্তরীণ অবজেক্ট পরিবর্তন করা হয়, তাহলে shallow copy করা অবজেক্টেও সেই পরিবর্তন দেখা যাবে।
-
 let obj1 = { name: "Alice", address: { city: "Dhaka" } };
 let obj2 = { ...obj1 }; // Shallow copy
 
 obj2.name = "Bob";
 obj2.address.city = "Chittagong";
+// console.log(obj1); // { name: 'Alice', address: { city: 'Chittagong' } }
+// console.log(obj2); // { name: 'Bob', address: { city: 'Chittagong' } }
 
-console.log(obj1); // { name: 'Alice', address: { city: 'Chittagong' } }
-console.log(obj2); // { name: 'Bob', address: { city: 'Chittagong' } }
+// Object.assign() used to copy
+const points = [
+  [10, 20],
+  [30, 40],
+];
+const pointsCopy = Object.assign([], [...points]);
+pointsCopy.push([50, 60]);
+pointsCopy[0][0] = 100;
+pointsCopy[0][1] = 120;
+console.log(points); // [ [ 100, 120 ], [ 30, 40 ] ]
+console.log(pointsCopy); // [ [ 100, 120 ], [ 30, 40 ], [ 50, 60 ] ]
+
+// 	•	Shallow copy শুধু প্রথম স্তরের কপি করে, কিন্তু nested objects-এর রেফারেন্স ধরে রাখে।
+//	•	Deep copy করলে সম্পূর্ণ নতুন কপি তৈরি হয় এবং nested objects আলাদাভাবে সংরক্ষিত থাকে।
